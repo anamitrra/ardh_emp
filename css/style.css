@@ -7,22 +7,19 @@
 }
 body{
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
+  width: 100vw;
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  background-attachment: fixed;
 }
 .container{
-  max-height: 90vh;
-  height: 100%;
+  margin: 1rem auto;
+  height: fit-content;
   max-width: 70vw;
   width: 100%;
   background-color: #fff;
   padding: 25px 30px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-  overflow-y: auto;
 }
 .container .title{
   font-size: 25px;
@@ -99,8 +96,49 @@ body{
    }
 
 
+.Ctable{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Ctable table{
+  border: 1px solid black;
+  table-layout: auto;
+  width: 100%;
+  height: fit-content;
+  border-collapse: collapse;
+}
+.Ctable th{
+  background-color: rgb(58, 53, 75);
+  color: white;
+}
+.Ctable tr:nth-child(even){
+  background-color: gainsboro;
+}
+.Ctable td{
+  padding: 5px;
+  border: 1px solid gray;
+}
+
+.Ctable button{
+  border: none;
+  border-radius: 0.5rem;
+  padding: 5px;
+  margin: 0 5px;
+}
+.Ctable .green{
+background-color: green;
+color: white;
+}
+.Ctable .orange{
+ background-color: #ee9105;
+ color: black;
+}
+
 
   @media(max-width: 700px){
+    
   .container{
    max-width: 95vw;
  }
