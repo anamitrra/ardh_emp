@@ -10,7 +10,7 @@
 <div class="container">
     <div class="title">Registration</div>
         <div class="content">
-            <from action ="reg.php" method ="POST">
+            <form action="reg.php" method ="POST">
                 <div>
                     <div class="user-details">
                         <div class="input">
@@ -65,9 +65,9 @@
         
                         <div class="input">
                             <span class="details">Upload Documents</span>
-                            <input type="file" required>
-                            <input type="file" required>
-                            <input type="file" required>
+                            <input type="file" name="photo1" >
+                            <!-- <input type="file" name="photo2" >
+                            <input type="file" name="photo3" > -->
                         </div>
                     </div>
         
@@ -77,7 +77,7 @@
                     <input type="submit" name="submit" value="submit">
                   </div>
         
-            </from>
+            </form>
         </div>
 
 </div>
