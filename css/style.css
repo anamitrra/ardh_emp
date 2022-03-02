@@ -14,12 +14,15 @@ body{
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 .container{
-  max-width: 700px;
+  max-height: 90vh;
+  height: 100%;
+  max-width: 70vw;
   width: 100%;
   background-color: #fff;
   padding: 25px 30px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  overflow-y: auto;
 }
 .container .title{
   font-size: 25px;
@@ -32,7 +35,7 @@ body{
   left: 0;
   bottom: 0;
   height: 3px;
-  width: 30px;
+  width: 40px;
   border-radius: 5px;
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
@@ -63,6 +66,10 @@ body{
     border-bottom-width: 2px;
     transition: all 1s ease;
   }
+  .user-details .input input[type=file]{
+    margin-bottom: 5px;
+    padding: 7px;
+  }
 
   .user-details .input input:focus,
   .user-details .input input:valid{
@@ -87,32 +94,26 @@ body{
     background: linear-gradient(135deg, #71b7e6, #9b59b6);
   }
 .button input:hover{
-   /* transform: scale(0.99); */
+   transform: scale(0.99);
    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
    }
-  @media(max-width: 584px){
+
+
+
+  @media(max-width: 700px){
   .container{
-   max-width: 100%;
+   max-width: 95vw;
  }
-.user-details .input-box{
-     margin-bottom: 15px;
+.user-details .input{
      width: 100%;
    }
-.category{
-     width: 100%;
-   }
+
  .content .user-details{
-     max-height: 300px;
-     overflow-y: scroll;
+     max-height: 100%;
    }
  .user-details::-webkit-scrollbar{
      width: 5px;
    }
    }
-   @media(max-width: 459px){
-   .container .content .category{
-     flex-direction: column;
-   }
- }
  
 
