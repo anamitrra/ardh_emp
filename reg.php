@@ -1,5 +1,5 @@
 <?php
-include('connect.php');
+include ('connect.php');
 
 
 $name = $_POST["name"];
@@ -22,10 +22,10 @@ $filename = $file1['name'];
 
 				$filenamenew = uniqid('', true) . "." . $fileActualEXt;
 				$photo1 = 'uploads/' . $filenamenew;
-				move_uploaded_file($filetemp, $$photo1);
+				move_uploaded_file($filetemp, $photo1);
+                
 
-
-$query="INSERT INTO `customer` (`id`, `name`, `careof`, `phone`, `village`, `po`, `pin`, `dist`, `state`, `nominee`, `dob`, `image`) VALUES (null, '$name', '$co', '$phone', '$vill', '$po', '$pin', '$dist', '$state', '$nominee', '$dob', '$photo1' ";
+$query="INSERT INTO `customer` (`id`, `name`, `careof`, `phone`, `village`, `po`, `pin`, `dist`, `state`, `nominee`, `dob`, `image`) VALUES (null, '$name', '$co', '$phone', '$vill', '$po', '$pin', '$dist', '$state', '$nominee', '$dob', '$photo1') ";
 
 				if (mysqli_query($con, $query)) {
 					header("location:registration.php");
