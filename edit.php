@@ -110,7 +110,7 @@
     <div class="container">
         <div class="title">Update Details</div>
         <div class="content">
-            <form action="reg.php" method="POST" enctype="multipart/form-data">
+            <form action="update.php" method="POST" enctype="multipart/form-data">
                 
                     <div class="user-details">
                         <div class="input">
