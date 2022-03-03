@@ -1,3 +1,23 @@
+<?php
+ include "connect.php";
+ $id=$_GET["id"];
+ $str="Select * from customer where id='$id'";
+ $result=mysqli_query($con,$str);
+ $row=mysqli_fetch_array($result);
+  $id=$row["id"];
+ $name=$row["name"];
+ $careof=$row["careof"];
+  $phone=$row["phone"];
+ $village=$row["village"];
+ $po=$row["po"];
+ $pin=$row["pin"];
+ $dist=$row["dist"];
+  $state=$row["state"];
+  $nominee=$row["nominee"];
+  $dob=$row["dob"];
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,32 +34,17 @@
     window.close()
   },750)
     </script>
+
+
 <div class="card">
-   <div class="card-avatar">
-      abcd
-   </div>
-   <div class="card-details">
-      <div class="name">Saitama</div>
-      <div class="occupation">Hero</div>
-      
-      <div class="card-about">
-         <div class="item">
-            <span class="value">25</span>
-            <span class="label">Age</span>
-         </div>
-         <div class="item">
-            <span class="value">70 kg </span>
-            <span class="label">Weight</span>
-         </div>
-         <div class="item">
-            <span class="value">175 cm</span>
-            <span class="label">Height</span>
-         </div>
-      </div>
-      <div class="skills">
-         <span class="value">Immeasurable Physical Prowess, Supernatural Reflexes and Senses, Invulnerability, Indomitable Will, Enhanced Fighting Skill</span>
-      </div>
-   </div>
+   <div class="title">AARADHAYA HEALTH CARE</div>
+<br>
+<p><span>ID : </span><?php echo $id; ?></p>
+<p><span>Name : </span><?php echo $id; ?></p>
+<p><span>Phone : </span><?php echo $phone; ?></p>
+<p><span>Address : </span><?php echo $village.', '. $state;?></p>
+<p><span>Pin : </span><?php echo $pin; ?></p>
 </div>
+
 </body>
 </html>
