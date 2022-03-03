@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +17,7 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Phone</th>
+                <th>Actions</th>
             </thead>
             <tbody>
             <?php
@@ -26,13 +26,14 @@
                       $result=mysqli_query($con,$sql);
                       while($row=mysqli_fetch_array($result))
                           {
-                          echo'<tr class="my-white" style="border-width: 0px;">';
-                                echo'<td style="width:20%; text-align:center;">'.$row[0].'</td>';
-                                echo'<td style="width:20%; text-align:center;">'.$row[1].'</td>';
-                                echo'<td style="width:20%; text-align:center;">'.$row[2].'</td>';
-                                echo'<td style="width:20%; text-align:center;" class="my-hover-text-red"> <a href="details.php?id='.$row[0].'">More Details</a></td>';
+                          echo'<tr class="my-white" style="border-width: 0px;">'; ?>
+                                <td style="width:20%; text-align:center;"><?php echo $row[0] ?></td>
+                                <td style="width:20%; text-align:center;"><?php echo $row[1] ?></td>
+                                <td style="width:20%; text-align:center;"><?php echo $row[3] ?></td>
+                                <td style="width:20%; text-align:center;"> <button class="green" onclick="location.href='details.php?id=<?php echo $row[0] ?>'">Details</button> </td>
                                 
-                        echo'</tr>';
+                        </tr>
+                        <?php
                           }   
                       ?>   
             </tbody>
