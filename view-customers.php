@@ -25,7 +25,7 @@
                 <td>content</td>
                 <td>content</td>
                 <td><button class="green">View</button>
-                <button class="orange">Print</button></td>
+                <button class="orange" onclick="location.href='card.php'">Print</button></td>
                 </tr>
                 <tr>
                 <td>content</td>
