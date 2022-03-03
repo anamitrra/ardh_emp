@@ -17,6 +17,7 @@ $file2 =  empty($_FILES['photo2']) ? null : $_FILES['photo2'];
 $file3 =   empty($_FILES['photo3']) ? null : $_FILES['photo3'];
 
 
+
 $allowed = array('jpg', 'jpeg', 'png');
 
 				if (isset($_POST['submit'])) {
@@ -83,7 +84,7 @@ $allowed = array('jpg', 'jpeg', 'png');
 							
 
 
-				$query="INSERT INTO `customer` (`id`, `name`, `careof`, `phone`, `village`, `po`, `pin`, `dist`, `state`, `nominee`, `dob`, `image1`, `image2`, `image3`) VALUES (null, '$name', '$co', '$phone', '$vill', '$po', '$pin', '$dist', '$state', '$nominee', '$dob', '$photo1','$photo2','$photo3') ";
+				$query="INSERT INTO `customer` (`id`, `name`, `careof`, `phone`, `village`, `po`, `pin`, `dist`, `state`, `nominee`, `dob`, `image1`, `image2`, `image3`) VALUES ('', '$name', '$co', '$phone', '$vill', '$po', '$pin', '$dist', '$state', '$nominee', '$dob', '$photo1','$photo2','$photo3') ";
 
 				if (mysqli_query($con, $query)) {
 				
