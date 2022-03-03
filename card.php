@@ -40,7 +40,7 @@
    <div class="title">AARADHAYA HEALTH CARE</div>
 <br>
 <p><span>ID : </span><?php echo $id; ?></p>
-<p><span>Name : </span><?php echo $id; ?></p>
+<p><span>Name : </span><?php echo $name; ?></p>
 <p><span>Phone : </span><?php echo $phone; ?></p>
 <p><span>Address : </span><?php echo $village.', '. $state;?></p>
 <p><span>Pin : </span><?php echo $pin; ?></p>
