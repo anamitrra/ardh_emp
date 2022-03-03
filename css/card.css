@@ -1,0 +1,82 @@
+:root {
+    --background: white;
+    --primary: #ff1ead;
+    --secondary: #1effc3;
+    --card-size: 300px;
+  }
+  
+  body {
+    height: 100vh;
+    margin: 0;
+   
+    padding: 1rem;
+   
+  }
+  
+  .card {
+    width: calc(var(--card-size) * 1.586);
+    height: var(--card-size);
+    border: 2px solid black;
+    background: white;
+    display: grid;
+    grid-template-columns: 40% auto;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    
+  }
+ 
+  
+  .card-details {
+    padding: 1rem;
+  }
+  
+  .name {
+    font-size: 1.25rem;
+  }
+  
+  .occupation {
+    font-weight: 600;
+    color: var(--primary);
+  }
+  
+  .card-avatar {
+    display: grid;
+    place-items: center;
+  }
+  
+  .card-about {
+    margin-top: 1rem;
+    display: grid;
+    grid-auto-flow: column;
+  }
+  
+  .item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+  }
+  .item .value {
+    font-size: 1rem;
+  }
+  .item .label {
+    margin-top: 0.15rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary);
+  }
+  
+  .skills {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.75rem;
+  }
+  .skills .label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+  }
+  .skills .value {
+    margin-top: 0.15rem;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }

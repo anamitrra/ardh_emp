@@ -13,7 +13,7 @@
     <div class="container">
         <div class="title">Registration</div>
         <div class="content">
-            <form action="reg.php" method="POST">
+            <form action="reg.php" method="POST" enctype="multipart/form-data">
                 
                     <div class="user-details">
                         <div class="input">
@@ -69,8 +69,8 @@
                         <div class="input">
                             <span class="details">Upload Documents</span>
                             <input type="file" name="photo1">
-                            <!-- <input type="file" name="photo2" >
-                            <input type="file" name="photo3" > -->
+                            <input type="file" name="photo2" >
+                            <input type="file" name="photo3" >
                         </div>
                     </div>
 
