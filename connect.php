@@ -1,3 +1,3 @@
 <?php
-$con=mysqli_connect("localhost","root1","pass","ardhemp")or die("can't connect...");
+$con=mysqli_connect("localhost","root","","ardhemp")or die("can't connect...");
 ?>

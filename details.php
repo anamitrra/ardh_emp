@@ -72,6 +72,7 @@
     <div class="row-wrap">
         <button class="orange">Generate ID Card</button>
         <button class="red">Delete</button>
+        <button class="green" onclick="location.href='edit.php?id=<?php echo $id ?>'">Update </button></a>
     </div>
     
  </div>
