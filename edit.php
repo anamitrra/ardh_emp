@@ -111,8 +111,12 @@
         <div class="title">Update Details</div>
         <div class="content">
             <form action="update.php" method="POST" enctype="multipart/form-data">
-                
+            <input type="text" name="id"  <?php echo 'value="'.$id.'"'; ?> >
                     <div class="user-details">
+                    <!-- <div class="input">
+                            <span class="details">ID</span>
+                            <!-- <input type="text" name="name" placeholder="Enter Name"  -->
+                        </div> -->
                         <div class="input">
                             <span class="details">Full name</span>
                             <input type="text" name="name" placeholder="Enter Name" <?php echo 'value="'.$name.'"'; ?> required>
@@ -163,12 +167,12 @@
                             <input type="date" name="dob" placeholder="Enter DOB" <?php echo 'value="'.$dob.'"'; ?> required>
                         </div>
 
-                        <div class="input">
+                        <!-- <div class="input">
                             <span class="details">Upload Documents</span>
                             <input type="file" name="photo1" >
                             <input type="file" name="photo2" >
                             <input type="file" name="photo3" >
-                        </div>
+                        </div> -->
                     </div>
 
 
