@@ -111,12 +111,10 @@
         <div class="title">Update Details</div>
         <div class="content">
             <form action="update.php" method="POST" enctype="multipart/form-data">
-            <input type="text" name="id"  <?php echo 'value="'.$id.'"'; ?> >
+            <input type="text" name="id"  <?php echo 'value="'.$id.'"'; ?> hidden >
                     <div class="user-details">
-                    <!-- <div class="input">
-                            <span class="details">ID</span>
-                            <!-- <input type="text" name="name" placeholder="Enter Name"  -->
-                        </div> -->
+                   
+                      
                         <div class="input">
                             <span class="details">Full name</span>
                             <input type="text" name="name" placeholder="Enter Name" <?php echo 'value="'.$name.'"'; ?> required>
