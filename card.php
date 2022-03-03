@@ -37,6 +37,7 @@
 $pdf = new FPDF('L','cm',array(15.822083333,27.78125));
 $pdf->AddPage();
 $pdf->Image($dir,0,0);
-$pdf->Output('D', 'id_card.pdf');
+$filename = $name."-id.pdf";
+$pdf->Output('D', $filename);
 
 ?>
