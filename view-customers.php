@@ -14,40 +14,26 @@
         <div class="Ctable">
         <table>
             <thead>
-                <th>hello</th>
-                <th>okk</th>
-                <th>hello</th>
-                <th>okk</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Phone</th>
             </thead>
             <tbody>
-                <tr>
-                <td>content</td>
-                <td>content</td>
-                <td>content</td>
-                <td><button class="green">View</button>
-                <button class="orange">Print</button></td>
-                </tr>
-                <tr>
-                <td>content</td>
-                <td>content</td>
-                <td>content</td>
-                <td><button class="green">View</button>
-                <button class="orange">Print</button></td>
-                </tr>
-                <tr>
-                <td>content</td>
-                <td>content</td>
-                <td>content</td>
-                <td><button class="green">View</button>
-                <button class="orange">Print</button></td>
-                </tr>
-                <tr>
-                <td>content</td>
-                <td>content</td>
-                <td>content</td>
-                <td><button class="green">View</button>
-                <button class="orange">Print</button></td>
-                </tr>
+            <?php
+                      include "connect.php";
+                      $sql="select * from customer;";
+                      $result=mysqli_query($con,$sql);
+                      while($row=mysqli_fetch_array($result))
+                          {
+                          echo'<tr class="my-white" style="border-width: 0px;">';
+                                echo'<td style="width:20%; text-align:center;">'.$row[0].'</td>';
+                                echo'<td style="width:20%; text-align:center;">'.$row[1].'</td>';
+                                echo'<td style="width:20%; text-align:center;">'.$row[2].'</td>';
+                                echo'<td style="width:20%; text-align:center;" class="my-hover-text-red"> <a href="details.php?id='.$row[0].'">More Details</a></td>';
+                                
+                        echo'</tr>';
+                          }   
+                      ?>   
             </tbody>
         </table>
         </div>
