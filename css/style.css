@@ -121,21 +121,63 @@ body{
   border: 1px solid gray;
 }
 
-.Ctable button{
+button{
   border: none;
   border-radius: 0.5rem;
-  padding: 5px;
+  padding: 10px;
   margin: 0 5px;
+  transition: .3s;
 }
-.Ctable .green{
+button:hover{
+  transform: scale(1.05);
+}
+.green{
 background-color: green;
 color: white;
 }
-.Ctable .orange{
+ .orange{
  background-color: #ee9105;
  color: black;
 }
+.red{
+  background-color: #da3f3f;
+  color: rgb(255, 255, 255);
+ }
 
+.details p{
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 35px;
+  width: 100%;
+}
+.details span{
+  color: rgb(37, 37, 37);
+  font-weight: 400;
+}
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row-wrap{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.image{
+  background-position: center;
+  background-size:contain ;
+  object-fit: cover;
+  width: 300px;
+  height: 200px;
+  border-radius: 1rem;
+  transition: .3s;
+}
+.image:hover{
+  transform: scale(0.9);
+}
 
   @media(max-width: 700px){
     
@@ -152,6 +194,10 @@ color: white;
  .user-details::-webkit-scrollbar{
      width: 5px;
    }
+
+   .row{
+    flex-wrap: wrap;
    }
+}
  
 

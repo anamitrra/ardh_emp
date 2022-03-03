@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,58 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View customers</title>
     <link rel="stylesheet" href="css/style.css">
-   
-
-    <style>
-@import url('https://fonts.googleapis.com/css2?family=Klee+One&family=Varela+Round&display=swap');
-        body,
-        html {
-            height: 100%;
-            
-        }
-
-        .parallax {
-            /* The image used */
-            background-image: url('img/back2.png');
-
-            /* Full height */
-            height: 100%;
-
-            /* Create the parallax scrolling effect */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-
-        }
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 999;
-        }
-
-        .nav:hover {
-            color: red;
-            cursor: pointer;
-        }
-
-        .details {
-            display: flex;
-            justify-content: space-evenly;
-            max-width: 1000px;
-            font-size:18px;
-            font-family: 'Klee One', cursive;
-        }
-        h1{
-            font-size:48px;
-            font-family: 'Varela Round', sans-serif;
-        }
-        td{
-            height:70px;
-            vertical-align:middle;
-        }
-        </style>
 
 
 </head>
@@ -83,89 +30,51 @@
     $state=$row["state"];
     $nominee=$row["nominee"];
     $dob=$row["dob"];
-
-
-
+    $image1=$row["image1"];
+    $image2=$row["image2"];
+    $image3=$row["image3"];
  ?>
-<div class="my-threequarter">
-                <div class="my-container my-white" style="height:460px; border-radius:5px;"><br>
 
-                    <center><br><br>
-                    <p>
-                    <h1><b>
-                            <?php echo $name ?>
-                        </b></h1>
-                    </p> <br>
-                    <div class="my-container details">
-                        <p>
-                            Id.: <b>
-                                <?php echo $id ?>
-                            </b>
-                        </p><br>
-                        <p>
-                           Name.: <b>
-                                <?php echo $name ?>
-                            </b>
-                        </p> <br>
+ <div class="details">
+ <h2><?php echo $name ?></h2>
+     <h2><span>ID : </span><?php echo $id ?></h2>
+     
+     <br>
+     <p><span>Phone : </span><?php echo $phone ?></p>
+     <div class="row">
+     <p><span>Care of :</span> <?php echo $careof ?></p>
+     <p><span>Village : </span><?php echo $village ?></p>
+     </div>
+     <div class="row">
+     <p><span>PO : </span><?php echo $po ?></p>
+     <p><span>Pin : </span><?php echo $pin ?></p>
+     </div>
+     <div class="row">
+     <p><span>District : </span><?php echo $dist ?></p>
+     <p><span>State : </span><?php echo $state ?></p>
+     </div>
+    <div class="row">
+    <p><span>Nominee : </span><?php echo $nominee ?></p>
+     <p><span>Date of birth : </span><?php echo $dob ?></p>
+    </div>
 
-                        <p>
-                            Care of: <b>
-                                <?php echo $careof ?>
-                            </b>
-                        </p> <br>
-                    </div>
-                    <div class="my-container details">
-                        <p>
-                            Phone No.: <b>
-                                <?php echo $phone ?>
-                            </b>
-                        </p> <br>
+    <br>
+    <u><h3>Documents</h3></u>
+    <br>
+    <div class="row-wrap">
+        <div class="image" style="background-image: url(<?php echo $image1 ?>);" onclick="location.href='<?php echo $image1 ?>'"></div>
+        <div class="image" style="background-image: url(<?php echo $image2 ?>);" onclick="location.href='<?php echo $image2 ?>'"></div>
+        <div class="image" style="background-image: url(<?php echo $image3 ?>);" onclick="location.href='<?php echo $image3 ?>'"></div>
+        
+    </div>
+    <br>
 
+    <div class="row-wrap">
+        <button class="orange">Generate ID Card</button>
+        <button class="red">Delete</button>
+    </div>
+    
+ </div>
 
-                        <p>
-                            village: <b>
-                                <?php echo $village ?>
-                            </b>
-                        </p><br>
-                        <p>
-                            PO: <b>
-                                <?php echo $po ?>
-                            </b>
-                        </p> <br>
-                    </div>
-                    <div class="my-container details">
-                        <p>
-                            Pin: <b>
-                                <?php echo $pin ?>
-                            </b>
-                        </p> <br>
-                        <p>
-                            Dist: <b>
-                                <?php echo $dist ?>
-                            </b>
-                        </p><br>
-
-                        <p>
-                            State: <b>
-                                <?php echo $state ?>
-                            </b>
-                        </p><br>
-                        <p>
-                            Nominee: <b>
-                                <?php echo $nominee ?>
-                            </b>
-                        </p><br>
-                        <p>
-                            Dob: <b>
-                                <?php echo $dob ?>
-                            </b>
-                        </p><br>
-                     <br>
-                
-                    </div>
-                    </center>
-                </div>
-                <br>
-            </div>
 </body>
 </html>
