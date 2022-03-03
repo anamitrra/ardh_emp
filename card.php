@@ -1,5 +1,8 @@
 <?php
  include "connect.php";
+
+ require ('fpdf/fpdf.php');
+
  $id=$_GET["id"];
  $str="Select * from customer where id='$id'";
  $result=mysqli_query($con,$str);
@@ -15,38 +18,25 @@
   $state=$row["state"];
   $nominee=$row["nominee"];
   $dob=$row["dob"];
+
+
+	header("Content-type: image/jpeg");
+  $font="AGENCYR.TTF";
+  $image=imagecreatefromjpeg("card.jpg");
+  $color=imagecolorallocate($image,19,21,22);
+ 
+  imagettftext($image,35,0,320,254,$color,$font,$name);
+  imagettftext($image,35,0,230,357,$color,$font,$id);
+  imagettftext($image,35,0,270,462,$color,$font,$dob);
+  imagettftext($image,35,0,830,462,$color,$font,$dob);
+
+  $dir="card-photo/card.jpeg";
+  imagejpeg($image, $dir);
+  imagedestroy($image);
+
+$pdf = new FPDF('L','cm',array(15.822083333,27.78125));
+$pdf->AddPage();
+$pdf->Image($dir,0,0);
+$pdf->Output('D', 'id_card.pdf');
+
 ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>card</title>
-    <link rel="stylesheet" href="css/card.css">
-</head>
-<body>
-    <script>
-        window.print();
-  setTimeout(function(){
-    window.close()
-  },750)
-    </script>
-
-
-<div class="card" style="background-image: url(css/card.png)">
-   <div class="title">AARADHAYA HEALTH CARE</div>
-<br>
-<div class="details">
-<p><span>ID : </span><?php echo $id; ?></p>
-<p><span>Name : </span><?php echo $name; ?></p>
-<p><span>Phone : </span><?php echo $phone; ?></p>
-<p><span>Address : </span><?php echo $village.', '. $state;?></p>
-<!-- <p><span>Pin : </span><?php echo $pin; ?></p> -->
-</div>
-</div>
-
-</body>
-</html>
