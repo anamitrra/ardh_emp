@@ -84,7 +84,7 @@ $allowed = array('jpg', 'jpeg', 'png');
 							
 
 
-				$query="INSERT INTO `customer` (`id`, `name`, `careof`, `phone`, `village`, `po`, `pin`, `dist`, `state`, `nominee`, `dob`, `image1`, `image2`, `image3`) VALUES ('$id', '$name', '$co', '$phone', '$vill', '$po', '$pin', '$dist', '$state', '$nominee', '$dob', '$photo1','$photo2','$photo3') ";
+				$query="INSERT INTO `customer` (`id`, `name`, `careof`, `phone`, `village`, `po`, `pin`, `dist`, `state`, `nominee`, `dob`,`issuedate`, `image1`, `image2`, `image3`) VALUES ('$id', '$name', '$co', '$phone', '$vill', '$po', '$pin', '$dist', '$state', '$nominee', '$dob',CURRENT_TIMESTAMP, '$photo1','$photo2','$photo3') ";
 
 				if (mysqli_query($con, $query)) {
 				
