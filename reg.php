@@ -1,7 +1,18 @@
 <?php
 include ('connect.php');
 
-$id =  "ARDH-".abs( crc32( uniqid() ) );
+$getid=mysqli_query($con, "SELECT id from customer order by issuedate DESC LIMIT 1");
+$n=mysqli_num_rows($getid);
+if($n==0){
+	$id =  "AHCCSLHSC101";
+}
+else{
+	$ids=mysqli_fetch_array($getid);
+	$idnum = end(explode('HSC10', $ids[0]));
+	$newidnum = $idnum+1;
+	$id = "AHCCSLHSC10".$newidnum;
+}
+
 $name = $_POST["name"];
 $co = $_POST["co"];
 $phone = $_POST["phone"];

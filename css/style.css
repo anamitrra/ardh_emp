@@ -52,7 +52,7 @@ body{
     font-weight: 500;
     margin-bottom: 5px;
 }
-.user-details .input input{
+.user-details .input input, .user-details .input select {
     height: 45px;
     width: 100%;
     outline: none;
@@ -60,6 +60,7 @@ body{
     border-radius: 5px;
     padding-left: 15px;
     border: 1px solid #ccc;
+    background-color: transparent;
     border-bottom-width: 2px;
     transition: all 1s ease;
   }
@@ -100,6 +101,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: scroll;
+  width: 100%;
 }
 
 .Ctable table{

@@ -8,16 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View customers</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
-
+    <script src="./jQueryAssets/jquery-1.8.3.min.js"></script>
+<script src="./DataTables/datatables.min.js"></script>
+<link rel="stylesheet" href="./DataTables/datatables.css">
+    
 </head>
 <body>
     <?php include 'nav.php' ?>
     <div class="container">
     <div class="title">Customers</div> <br>
         <div class="Ctable">
-        <table id="datatable">
+        <table id="myTable">
             <thead>
                 <th>Id</th>
                 <th>Name</th>
@@ -29,11 +30,11 @@
             <?php
                       include "connect.php";
                       
-                      $sql="select * from customer ;";
+                      $sql="SELECT * from customer;";
                       $result=mysqli_query($con,$sql);
                       while($row=mysqli_fetch_array($result))
                           {
-                          echo'<tr class="my-white" style="border-width: 0px;">'; ?>
+                          echo'<tr style="border-width: 0px;">'; ?>
                                 <td style="width:20%; text-align:center;"><?php echo $row[0] ?></td>
                                 <td style="width:20%; text-align:center;"><?php echo $row[1] ?></td>
                                 <td style="width:20%; text-align:center;"><?php echo $row[3] ?></td>
@@ -49,12 +50,16 @@
         </div>
     </div>
 
-    
 <script>
     $(document).ready( function () {
-    $("datatable").DataTable();
+    $('#myTable').DataTable({
+        "order": [[ 3, "desc" ]],
+        responsive: true,
+    });
+    
 } );
-    </script>
+</script>    
+
 </body>
 
 

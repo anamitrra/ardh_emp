@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+    <title>Login</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -15,13 +15,13 @@
         <div class="content">
             <form action="login.php" method="POST" >
                 
-                    <div class="user-details">
-                        <div class="input">
+                    <div class="user-details" style="flex-direction: column;">
+                        <div class="input" style="width: 100%;">
                             <span class="details">Username</span>
                             <input type="text" name="username" placeholder="Enter Username" required>
                         </div>
 
-                        <div class="input">
+                        <div class="input" style="width: 100%;">
                             <span class="details">Password</span>
                             <input type="password" name="password" placeholder="Enter Password" required>
                         </div>
@@ -33,7 +33,7 @@
 
 
                 <div class="button">
-                    <input type="submit" name="submit" value="submit">
+                    <input type="submit" name="submit" value="Login">
                 </div>
 
             </form>

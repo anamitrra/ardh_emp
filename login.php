@@ -9,7 +9,7 @@ if(isset($_POST["submit"]))
 	$userid=$_POST["username"];
 	$upass=$_POST["password"];
 	
-	$sql="select password from admin where username='$userid' AND password = '$upass' ";
+	$sql="SELECT * from admin where `username` ='$userid' AND `password` = '$upass' ";
 	$result=mysqli_query($con,$sql);
 	$n=mysqli_num_rows($result);
 	if($n==1)
@@ -22,25 +22,10 @@ if(isset($_POST["submit"]))
 
         
 	}
-	else
-	{
-		$row=mysqli_fetch_array($result);
-		if($row[0]==$upass)
-		{
-			$_SESSION["username"]=$userid;
-			header("location:view-customers.php");
-		}
-		else
-		{
-			
-			header("location:index.php?log=1");
-			
-		}
-	}
-}
 else
 {
-	header("location:index.php?");
+	header("location:index.php");
+}
 }
 ?>
 	
