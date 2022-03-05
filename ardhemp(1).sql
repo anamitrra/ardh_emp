@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Mar 03, 2022 at 05:45 AM
+-- Generation Time: Mar 05, 2022 at 09:38 AM
 -- Server version: 5.7.32
 -- PHP Version: 7.4.12
 
@@ -23,14 +23,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES
+(1, 'admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `customer`
 --
 
 CREATE TABLE `customer` (
-  `id` int(255) NOT NULL,
+  `id` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `careof` varchar(255) NOT NULL,
-  `phone` int(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
   `village` varchar(255) NOT NULL,
   `po` varchar(255) NOT NULL,
   `pin` int(10) NOT NULL,
@@ -38,6 +57,7 @@ CREATE TABLE `customer` (
   `state` varchar(255) NOT NULL,
   `nominee` varchar(255) NOT NULL,
   `dob` date NOT NULL,
+  `issuedate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `image1` varchar(255) DEFAULT NULL,
   `image2` varchar(255) DEFAULT NULL,
   `image3` varchar(255) DEFAULT NULL
@@ -46,6 +66,12 @@ CREATE TABLE `customer` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `customer`
@@ -58,10 +84,10 @@ ALTER TABLE `customer`
 --
 
 --
--- AUTO_INCREMENT for table `customer`
+-- AUTO_INCREMENT for table `admin`
 --
-ALTER TABLE `customer`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `admin`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
