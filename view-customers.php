@@ -1,3 +1,5 @@
+<?php include "session.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View customers</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
 </head>
 <body>
     <?php include 'nav.php' ?>
     <div class="container">
     <div class="title">Customers</div> <br>
         <div class="Ctable">
-        <table>
+        <table id="datatable">
             <thead>
                 <th>Id</th>
                 <th>Name</th>
@@ -23,7 +28,8 @@
             <tbody>
             <?php
                       include "connect.php";
-                      $sql="select * from customer ORDER BY issuedate DESC;";
+                      
+                      $sql="select * from customer ;";
                       $result=mysqli_query($con,$sql);
                       while($row=mysqli_fetch_array($result))
                           {
@@ -42,5 +48,14 @@
         </table>
         </div>
     </div>
+
+    
+<script>
+    $(document).ready( function () {
+    $("datatable").DataTable();
+} );
+    </script>
 </body>
+
+
 </html>

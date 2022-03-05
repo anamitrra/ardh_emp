@@ -5,5 +5,6 @@
         <div class="links">
             <a href="registration.php">Registration</a>
             <a href="view-customers.php">View</a>
+            <a href="logout.php">logout</a>
         </div>
     </nav>

@@ -1,3 +1,5 @@
+
+<?php include "session.php"; ?>
 <html lang="en">
 
 <head>
