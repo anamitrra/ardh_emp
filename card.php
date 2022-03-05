@@ -9,15 +9,8 @@
  $row=mysqli_fetch_array($result);
   $id=$row["id"];
  $name=$row["name"];
- $careof=$row["careof"];
-  $phone=$row["phone"];
- $village=$row["village"];
- $po=$row["po"];
- $pin=$row["pin"];
- $dist=$row["dist"];
-  $state=$row["state"];
-  $nominee=$row["nominee"];
-  $dob=$row["dob"];
+ $issuedate=new DateTime($row["issuedate"]);
+$issuedate->format('d/m/Y');
 
 
 	header("Content-type: image/jpeg");
@@ -27,8 +20,8 @@
  
   imagettftext($image,35,0,320,254,$color,$font,$name);
   imagettftext($image,35,0,230,357,$color,$font,$id);
-  imagettftext($image,35,0,270,462,$color,$font,$dob);
-  imagettftext($image,35,0,830,462,$color,$font,$dob);
+  imagettftext($image,35,0,270,462,$color,$font,$issuedate->format('d/m/Y'));
+  imagettftext($image,35,0,830,462,$color,$font,$issuedate->format('d/m/Y'));
 
   $dir="card-photo/card.jpeg";
   imagejpeg($image, $dir);

@@ -30,6 +30,7 @@
     $state=$row["state"];
     $nominee=$row["nominee"];
     $dob=$row["dob"];
+    $issuedate=new DateTime($row["issuedate"]);
     $image1=$row["image1"];
     $image2=$row["image2"];
     $image3=$row["image3"];
@@ -40,7 +41,10 @@
      <h2><span>ID : </span><?php echo $id ?></h2>
      
      <br>
+     <div class="row">
      <p><span>Phone : </span><?php echo $phone ?></p>
+     <p><span>Issue date : </span><?php echo $issuedate->format('d/m/Y') ?></p>
+     </div>
      <div class="row">
      <p><span>Care of :</span> <?php echo $careof ?></p>
      <p><span>Village : </span><?php echo $village ?></p>
