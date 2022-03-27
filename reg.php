@@ -4,13 +4,13 @@ include ('connect.php');
 $getid=mysqli_query($con, "SELECT id from customer order by issuedate DESC LIMIT 1");
 $n=mysqli_num_rows($getid);
 if($n==0){
-	$id =  "AHCCSLHSC101";
+	$id =  "AHCCSLHSC10001";
 }
 else{
 	$ids=mysqli_fetch_array($getid);
 	$idnum = end(explode('HSC10', $ids[0]));
 	$newidnum = $idnum+1;
-	$id = "AHCCSLHSC10".$newidnum;
+	$id = "AHCCSLHSC1000".$newidnum;
 }
 
 $name = $_POST["name"];
