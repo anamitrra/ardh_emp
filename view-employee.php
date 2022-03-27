@@ -37,9 +37,9 @@
                           echo'<tr style="border-width: 0px;">'; ?>
                                 <td style="width:20%; text-align:center;"><?php echo $row[0] ?></td>
                                 <td style="width:20%; text-align:center;"><?php echo $row[1] ?></td>
+                                <td style="width:20%; text-align:center;"><?php echo $row[2] ?></td>
                                 <td style="width:20%; text-align:center;"><?php echo $row[3] ?></td>
                                 <td style="width:20%; text-align:center;"><?php echo $row[4] ?></td>
-                                <td style="width:20%; text-align:center;"><?php echo $row[5] ?></td>
                                
                                 
                         </tr>

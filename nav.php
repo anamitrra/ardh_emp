@@ -5,7 +5,8 @@
         <div class="links">
             <a href="registration.php">Registration</a>
             <a href="add_employee.php">Add Employee</a>
-            <a href="view-customers.php">View</a>
+            <a href="view-employee.php">View Employee</a>
+            <a href="view-customers.php">View Customer</a>
             <a href="logout.php">Logout</a>
         </div>
     </nav>
