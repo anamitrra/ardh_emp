@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View customers</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="./jQueryAssets/jquery-1.8.3.min.js"></script>
-<script src="./DataTables/datatables.min.js"></script>
-<link rel="stylesheet" href="./DataTables/datatables.css">
+    <script src="./../jQueryAssets/jquery-1.8.3.min.js"></script>
+<script src="./../DataTables/datatables.min.js"></script>
+<link rel="stylesheet" href="./../DataTables/datatables.css">
     
 </head>
 <body>
